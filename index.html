@@ -3,23 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moja Strona</title>
+    <title>Moja zaawansowana strona</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Witaj na mojej stronie!</h1>
+    <header class="header">
+        <div class="logo">
+            <h1>Moja Strona</h1>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#home">Strona Główna</a></li>
+                <li><a href="#about">O mnie</a></li>
+                <li><a href="#services">Usługi</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <section>
-            <h2>Opis</h2>
-            <p>To jest strona stworzona z użyciem GitHub i HTML.</p>
-        </section>
+    <section id="home" class="section">
+        <div class="content">
+            <h2>Witaj na mojej stronie!</h2>
+            <p>To jest sekcja główna, gdzie witamy odwiedzających.</p>
+        </div>
+    </section>
 
-        <button id="copyButton">Kopiuj e-mail</button>
-        <p id="successMsg" style="display: none;">Skopiowano!</p>
-    </main>
+    <section id="about" class="section about-section">
+        <h2>O mnie</h2>
+        <p>Jestem pasjonatem tworzenia stron internetowych i kodowania w JavaScript.</p>
+    </section>
+
+    <section id="services" class="section services-section">
+        <h2>Usługi</h2>
+        <div class="service-cards">
+            <div class="card">
+                <h3>Usługa 1</h3>
+                <p>Opis usługi 1</p>
+            </div>
+            <div class="card">
+                <h3>Usługa 2</h3>
+                <p>Opis usługi 2</p>
+            </div>
+            <div class="card">
+                <h3>Usługa 3</h3>
+                <p>Opis usługi 3</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+        <h2>Kontakt</h2>
+        <p>Chciałbyś się skontaktować? Napisz do mnie!</p>
+        <button id="copyButton">Skopiuj e-mail</button>
+        <p id="successMsg" style="display:none;">Skopiowane!</p>
+        <p id="email">kontakt@mojastrona.pl</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Moja Strona. Wszelkie prawa zastrzeżone.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
