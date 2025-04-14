@@ -55,10 +55,18 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
+    color: #D9D9D9; /* domyślnie szary */
+    font-weight: normal;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
     color: black;
     font-weight: bold;
-    font-size: 18px;
+    transform: scale(1.05);
 }
+
 
 /* ODSTĘP PO HEADERZE */
 .header-spacer {
@@ -77,6 +85,7 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
 }
