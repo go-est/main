@@ -31,6 +31,7 @@ header {
     align-items: center;
     gap: 10px;
     margin-right: auto;
+    flex-shrink: 0; /* Zapobieganie zmniejszaniu logo */
 }
 
 .logo-img {
@@ -51,6 +52,7 @@ nav ul {
     gap: 40px;
     margin: 0;
     padding: 0 10px;
+    flex-wrap: wrap; /* Dodanie możliwości łamania na mniejsze ekrany */
 }
 
 nav ul li a {
@@ -106,10 +108,11 @@ nav ul li a:hover {
     line-height: 1.6;
 }
 
-
 /* KONTAKT – CENTER BUTTON */
 #contact {
-    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Wyrównanie przycisku na środku */
 }
 
 button {
@@ -132,6 +135,10 @@ button:hover {
     color: black;
     transform: scale(1.05);
     font-size: 17px;
+}
+
+button:focus {
+    outline: 3px solid #F75DB1; /* Stylizacja focus dla dostępności */
 }
 
 #successMsg {
