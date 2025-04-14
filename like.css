@@ -4,6 +4,7 @@
     justify-content: center;
     gap: 10px;
     margin-top: 30px;
+    position: relative; /* Dodajemy, aby kontener nie rozciągał strony */
 }
 
 /* Przycisk Polubienia z grafiką */
@@ -24,6 +25,9 @@
     background-size: cover;
     background-position: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Dodajemy lekki cień */
+    max-width: 60px; /* Ograniczamy szerokość przycisku */
+    max-height: 60px; /* Ograniczamy wysokość przycisku */
+    overflow: hidden; /* Zabezpieczamy, aby elementy nie wychodziły poza przycisk */
 }
 
 /* Zmiana grafiki po hover */
@@ -54,4 +58,13 @@
 #likeButton:disabled {
     opacity: 0.6;
     cursor: default;
+}
+
+/* Zapewniamy, że przycisk nie będzie rozciągał się na stronę */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
