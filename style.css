@@ -11,6 +11,7 @@ body {
     color: white;
 }
 
+/* Header */
 header {
     background-color: #F75DB1;
     padding: 20px 40px;
@@ -20,16 +21,28 @@ header {
     left: 0;
     z-index: 1000;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
+/* Logo z ikoną */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+}
+
+/* Menu przesunięte w prawo */
 nav ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     gap: 40px;
+    padding-right: 20px;
 }
 
 nav ul li a {
@@ -37,6 +50,11 @@ nav ul li a {
     color: black;
     font-weight: bold;
     font-size: 18px;
+}
+
+/* Odstęp dla 1. sekcji */
+#home.section {
+    padding-top: 160px; /* więcej niż wysokość headera */
 }
 
 .section {
@@ -94,11 +112,4 @@ footer {
     padding: 20px;
     background-color: #000;
     color: #D9D9D9;
-}
-
-
-.logo-img {
-    height: 40px;
-    margin-right: 10px;
-    vertical-align: middle;
 }
