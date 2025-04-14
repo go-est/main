@@ -24,7 +24,6 @@ let isLiked = false;  // Sprawdzenie, czy przycisk został kliknięty
 let likeCount = 0;    // Zmienna przechowująca liczbę kliknięć
 
 const likeButton = document.getElementById('likeButton');
-const likeIcon = document.getElementById('likeIcon');
 const likeCountElement = document.getElementById('likeCount');
 
 likeButton.addEventListener('click', () => {
