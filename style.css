@@ -88,16 +88,26 @@ nav ul li a:hover {
     color: black;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: flex-start;  /* Upewnij się, że zawartość jest wyrównana do góry */
     align-items: center;
     text-align: center;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
 }
 
+/* Poprawka sekcji "Co to za projekt?" */
 #home.section {
-    padding-top: 25px;
+    padding-top: 40px;  /* Zwiększenie odstępu na górze */
+    padding-bottom: 40px;  /* Dodanie przestrzeni na dole sekcji */
+    margin-top: 80px; /* Zwiększenie przestrzeni między headerem a sekcją */
 }
 
+/* Pozostałe sekcje */
+#ankieta.section, #contact.section {
+    padding-top: 40px;  /* Dostosowanie paddingu do innych sekcji */
+    padding-bottom: 40px;
+}
+
+/* Styl nagłówków w sekcjach */
 .section h2 {
     font-size: 32px;
     margin-bottom: 40px;
@@ -139,14 +149,7 @@ button:hover {
     color: green;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #000;
-    color: #D9D9D9;
-}
-
-/* STYLIZACJA KONTAKTY */
+/* KONTAKT – CENTER BUTTON */
 #contact {
     align-items: center;
 }
