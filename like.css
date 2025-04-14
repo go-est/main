@@ -6,11 +6,11 @@
     margin-top: 30px;
 }
 
-/* Przycisk Polubienia */
+/* Przycisk Polubienia z grafiką */
 #likeButton {
     background-color: transparent;
     border: 2px solid #F75DB1;
-    color: #F75DB1; /* Kolor początkowy serduszka */
+    color: #F75DB1; /* Kolor początkowy */
     border-radius: 50%;
     padding: 15px;
     width: 60px;
@@ -18,30 +18,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 30px;
     cursor: pointer;
     transition: all 0.3s ease;
-}
-
-/* Ikona serca z grafiką */
-#likeIcon {
-    width: 30px;
-    height: 30px;
-    background-image: url('link-do-ikony'); /* Zamień 'link-do-ikony' na ścieżkę do Twojego pliku */
+    background-image: url('serce1.png'); /* Podstawowe serce */
     background-size: cover;
     background-position: center;
-    transition: transform 0.3s ease;
 }
 
-/* Powiększanie ikony serduszka przy hover */
-#likeButton:hover #likeIcon {
-    transform: scale(1.1);
+/* Zmiana grafiki po hover */
+#likeButton:hover {
+    background-image: url('serce2.png'); /* Zmieniamy grafikę po hover */
 }
 
-/* Zmiana koloru i zablokowanie przycisku po kliknięciu */
+/* Zmiana grafiki po kliknięciu */
 #likeButton.liked {
+    background-image: url('serce2.png'); /* Utrzymanie serca po kliknięciu */
     background-color: #FF3B30; /* Czerwony po kliknięciu */
-    border-color: #FF3B30; /* Zmiana koloru obramowania */
+    border-color: #FF3B30;
     color: white;
     pointer-events: none; /* Zablokowanie kliknięcia */
 }
