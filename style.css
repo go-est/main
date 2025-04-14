@@ -69,10 +69,15 @@ nav ul li a:hover {
 
 /* ODSTĘP PO HEADERZE */
 .header-spacer {
-    height: 150px; /* regulowany dystans od headera */
+    height: 250px; /* regulowany dystans od headera */
 }
 
 /* SEKCJE */
+
+#home.section {
+    padding-top: 80px; /* domyślnie było 40px, więc zwiększamy */
+}
+
 .section {
     min-height: 70vh;
     margin: 80px auto;
@@ -91,16 +96,16 @@ nav ul li a:hover {
 
 .section h2 {
     font-size: 32px;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin-bottom: 40px; /* było 20px – więcej przestrzeni nad tekstem */
 }
 
 .section p {
     font-size: 20px;
     max-width: 700px;
-    margin: 0 auto;
+    margin: 0 auto 40px auto; /* więcej miejsca pod tekstem */
     line-height: 1.6;
 }
+
 
 /* KONTAKT – CENTER BUTTON */
 #contact {
