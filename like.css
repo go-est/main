@@ -23,14 +23,18 @@
     transition: all 0.3s ease;
 }
 
-/* Styl dla serduszka */
+/* Ikona serca z grafiką */
 #likeIcon {
-    color: inherit; /* Dziedziczy kolor przycisku */
-    transition: color 0.3s ease;
+    width: 30px;
+    height: 30px;
+    background-image: url('link-do-ikony'); /* Zamień 'link-do-ikony' na ścieżkę do Twojego pliku */
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
 }
 
-/* Powiększanie serduszka przy hover */
-#likeButton:hover {
+/* Powiększanie ikony serduszka przy hover */
+#likeButton:hover #likeIcon {
     transform: scale(1.1);
 }
 
