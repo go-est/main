@@ -13,3 +13,34 @@ document.getElementById("copyButton").onclick = function() {
             alert("Nie udało się skopiować tekstu.");
         });
 };
+
+
+
+
+//przycisk w sekcji 1 poniżej
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const likeButton = document.getElementById('likeButton');
+    const likeCount = document.getElementById('likeCount');
+
+    if (localStorage.getItem('liked') === 'true') {
+        likeButton.disabled = true;
+        likeButton.innerText = '💖 Dziękujemy!';
+        likeCount.textContent = localStorage.getItem('likeCount') || '1';
+    }
+
+    likeButton.addEventListener('click', () => {
+        let count = parseInt(localStorage.getItem('likeCount') || '0');
+        count++;
+
+        likeButton.innerHTML = '💖 Dziękujemy!';
+        likeButton.disabled = true;
+        likeCount.textContent = count;
+
+        localStorage.setItem('liked', 'true');
+        localStorage.setItem('likeCount', count);
+    });
+});
