@@ -1,3 +1,4 @@
+/* Globalne style */
 * {
     box-sizing: border-box;
 }
@@ -6,8 +7,11 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000;
+    background-color: #000; /* Tło strony */
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* HEADER */
@@ -23,6 +27,7 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 60px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Dodanie cienia */
 }
 
 /* LOGO */
@@ -41,7 +46,7 @@ header {
 .logo h1 {
     margin: 0;
     font-size: 24px;
-    color: #D9D9D9; /* Szary tekst EST */
+    color: #D9D9D9;
 }
 
 /* MENU */
@@ -73,11 +78,6 @@ nav ul li a:hover {
 }
 
 /* SEKCJE */
-
-#home.section {
-    padding-top: 25px; /* domyślnie było 40px, więc zwiększamy */
-}
-
 .section {
     min-height: 70vh;
     margin: 80px auto;
@@ -94,24 +94,23 @@ nav ul li a:hover {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
 }
 
+#home.section {
+    padding-top: 25px;
+}
+
 .section h2 {
     font-size: 32px;
-    margin-bottom: 40px; /* było 20px – więcej przestrzeni nad tekstem */
+    margin-bottom: 40px;
 }
 
 .section p {
     font-size: 20px;
     max-width: 700px;
-    margin: 0 auto 40px auto; /* więcej miejsca pod tekstem */
+    margin: 0 auto 40px auto;
     line-height: 1.6;
 }
 
-
-/* KONTAKT – CENTER BUTTON */
-#contact {
-    align-items: center;
-}
-
+/* STYLIZACJA PRZYCISKÓW */
 button {
     margin-top: 30px;
     padding: 12px 24px;
@@ -145,4 +144,40 @@ footer {
     padding: 20px;
     background-color: #000;
     color: #D9D9D9;
+}
+
+/* STYLIZACJA KONTAKTY */
+#contact {
+    align-items: center;
+}
+
+#copyButton {
+    width: auto; /* Dopasowanie szerokości przycisku */
+}
+
+#copyButton:hover {
+    transform: scale(1.1);
+}
+
+/* Responsywność na mniejszych ekranach */
+@media screen and (max-width: 768px) {
+    .header-spacer {
+        height: 150px; /* Zmniejszenie odstępu na mniejszych ekranach */
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    .section {
+        padding: 40px 20px; /* Zmniejszenie paddingu na mniejszych ekranach */
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
 }
