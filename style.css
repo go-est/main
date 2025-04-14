@@ -55,7 +55,7 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    color: #D9D9D9; /* domyślnie szary */
+    color: #D9D9D9;
     font-weight: normal;
     font-size: 18px;
     transition: all 0.3s ease;
@@ -64,13 +64,12 @@ nav ul li a {
 nav ul li a:hover {
     color: black;
     font-weight: bold;
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
-
 
 /* ODSTĘP PO HEADERZE */
 .header-spacer {
-    height: 80px; /* Nowy odstęp – możesz regulować */
+    height: 100px; /* regulowany dystans od headera */
 }
 
 /* SEKCJE */
@@ -80,11 +79,11 @@ nav ul li a:hover {
     max-width: 900px;
     background-color: #F75DB1;
     border-radius: 20px;
-    padding: 60px 30px;
+    padding: 60px 30px 40px 30px;
     color: black;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
@@ -93,6 +92,7 @@ nav ul li a:hover {
 .section h2 {
     font-size: 32px;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .section p {
@@ -117,8 +117,9 @@ button {
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.3s ease;
-    width: auto;
+    width: 100%;
     max-width: 250px;
+    text-align: center;
 }
 
 button:hover {
