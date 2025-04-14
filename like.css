@@ -4,7 +4,7 @@
     justify-content: center;
     gap: 10px;
     margin-top: 30px;
-    position: relative; /* Dodajemy, aby kontener nie rozciągał strony */
+    position: relative; /* Kontener z pozycjonowaniem */
 }
 
 /* Przycisk Polubienia z grafiką */
@@ -25,9 +25,6 @@
     background-size: cover;
     background-position: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Dodajemy lekki cień */
-    max-width: 60px; /* Ograniczamy szerokość przycisku */
-    max-height: 60px; /* Ograniczamy wysokość przycisku */
-    overflow: hidden; /* Zabezpieczamy, aby elementy nie wychodziły poza przycisk */
 }
 
 /* Zmiana grafiki po hover */
@@ -70,40 +67,17 @@
     pointer-events: none;
 }
 
-.heart:nth-child(1) {
-    animation-delay: 0.2s;
-}
-
-.heart:nth-child(2) {
-    animation-delay: 0.4s;
-}
-
-.heart:nth-child(3) {
-    animation-delay: 0.6s;
-}
-
-.heart:nth-child(4) {
-    animation-delay: 0.8s;
-}
-
-.heart:nth-child(5) {
-    animation-delay: 1s;
-}
-
 /* Kolorowe serduszka */
 .heart.color-1 {
     background-image: url('serce1.png');
-    animation: heartBurst 1s ease-out forwards;
 }
 
 .heart.color-2 {
     background-image: url('serce2.png');
-    animation: heartBurst 1s ease-out forwards;
 }
 
 .heart.color-3 {
     background-image: url('serce3.png');
-    animation: heartBurst 1s ease-out forwards;
 }
 
 /* Licznik polubień */
@@ -129,9 +103,7 @@ body {
     align-items: center;
 }
 
-
-
-
+/* Animacja "latających" serduszek */
 .flying-heart {
     position: fixed;
     bottom: 100px;
