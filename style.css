@@ -14,7 +14,7 @@ body {
 /* Header */
 header {
     background-color: #F75DB1;
-    padding: 20px 40px;
+    padding: 10px 40px; /* Zmieniliśmy wysokość paddingu z 20px na 10px */
     position: fixed;
     width: 100%;
     top: 0;
@@ -58,7 +58,7 @@ nav ul li a {
 }
 
 .section {
-    min-height: 80vh;
+    min-height: 80vh; /* Zmieniamy to na 70vh */
     margin: 120px auto;
     max-width: 900px;
     background-color: #F75DB1;
@@ -94,7 +94,10 @@ button {
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.3s ease;
+    width: auto;  /* Możesz dodać szerokość jeśli chcesz */
+    max-width: 250px; /* Nowa szerokość przycisku */
 }
+
 
 button:hover {
     background-color: #D9D9D9;
