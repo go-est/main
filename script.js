@@ -21,35 +21,36 @@ document.getElementById("copyButton").onclick = function() {
 
 
 
+// Pobieranie elementów
 let likeButton = document.getElementById('likeButton');
 let likeCountElement = document.getElementById('likeCount');
+let likeImage = document.getElementById('likeImage');
 
-// Sprawdzenie, czy dane istnieją w localStorage
-let likeCount = localStorage.getItem('likeCount') ? parseInt(localStorage.getItem('likeCount')) : 0; // Ustawienie początkowej wartości
-let isLiked = localStorage.getItem('isLiked') === 'true'; // Zczytanie stanu przycisku (czy kliknięty)
+// Sprawdzamy, czy zapisane dane istnieją w localStorage
+let likeCount = localStorage.getItem('likeCount') ? parseInt(localStorage.getItem('likeCount')) : 0; // Jeśli nie ma, zaczynamy od 0
+let isLiked = localStorage.getItem('isLiked') === 'true'; // Sprawdzamy, czy użytkownik już kliknął
 
-likeCountElement.textContent = likeCount; // Ustawienie początkowego licznika
+// Ustawienie początkowego licznika polubień
+likeCountElement.textContent = likeCount;
 
-// Zmiana grafiki i stanu przycisku
+// Jeśli użytkownik już polubił, zablokuj przycisk i zmień serduszko
 if (isLiked) {
+  likeButton.disabled = true;
   likeButton.classList.add('liked');
-  likeButton.disabled = true; // Zablokowanie przycisku
 }
 
 // Obsługa kliknięcia
-likeButton.addEventListener('click', () => {
+likeButton.addEventListener('click', function() {
   if (!isLiked) {
     likeCount++; // Zwiększ liczbę kliknięć
     likeCountElement.textContent = likeCount;
 
-    // Zmiana koloru przycisku i blokowanie dalszych kliknięć
-    likeButton.classList.add('liked');
-    isLiked = true;
-
-    // Zapisanie danych do localStorage
+    // Zapisujemy dane do localStorage
     localStorage.setItem('likeCount', likeCount); // Zapisz liczbę kliknięć
-    localStorage.setItem('isLiked', true); // Zapisz, że przycisk został kliknięty
+    localStorage.setItem('isLiked', true); // Zapisz stan przycisku (czy kliknięty)
 
-    likeButton.disabled = true; // Zablokowanie przycisku
+    // Zablokuj przycisk po kliknięciu
+    likeButton.disabled = true;
+    likeButton.classList.add('liked');
   }
 });
