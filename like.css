@@ -1,3 +1,4 @@
+/* Kontener dla przycisku polubienia */
 .like-container {
     display: flex;
     align-items: center;
@@ -7,7 +8,7 @@
     position: relative; /* Kontener z pozycjonowaniem */
 }
 
-/* Przycisk Polubienia z grafiką */
+/* Przycisk polubienia z grafiką */
 #likeButton {
     background-color: transparent;
     border: 2px solid #F75DB1;
@@ -24,7 +25,7 @@
     background-image: url('serce1.png'); /* Podstawowe serce */
     background-size: cover;
     background-position: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Dodajemy lekki cień */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Lekki cień */
 }
 
 /* Zmiana grafiki po hover */
@@ -43,7 +44,7 @@
     transform: scale(0.9); /* Zmniejszamy przycisk po kliknięciu */
 }
 
-/* Animacja serduszek */
+/* Animacja dla serduszek */
 @keyframes heartBurst {
     0% {
         transform: scale(0);
@@ -103,7 +104,7 @@ body {
     align-items: center;
 }
 
-/* Animacja "latających" serduszek */
+/* Animacja dla "latających" serduszek */
 .flying-heart {
     position: fixed;
     bottom: 100px;
