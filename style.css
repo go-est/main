@@ -75,7 +75,7 @@ nav ul li a:hover {
 /* SEKCJE */
 
 #home.section {
-    padding-top: 80px; /* domyślnie było 40px, więc zwiększamy */
+    padding-top: 25px; /* domyślnie było 40px, więc zwiększamy */
 }
 
 .section {
