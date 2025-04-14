@@ -97,9 +97,12 @@ button {
 }
 
 button:hover {
-    background-color: #F75DB1;
+    background-color: #D9D9D9;
     color: black;
+    transform: scale(1.05);
+    font-size: 17px;
 }
+
 
 #successMsg {
     margin-top: 12px;
