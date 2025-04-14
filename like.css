@@ -46,6 +46,66 @@
     transform: scale(0.9); /* Zmniejszamy przycisk po kliknięciu */
 }
 
+/* Animacja serduszek */
+@keyframes heartBurst {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+/* Małe serduszka */
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url('serce1.png');
+    background-size: cover;
+    background-position: center;
+    animation: heartBurst 1s ease-out forwards;
+    pointer-events: none;
+}
+
+.heart:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.heart:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.heart:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.heart:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.heart:nth-child(5) {
+    animation-delay: 1s;
+}
+
+/* Kolorowe serduszka */
+.heart.color-1 {
+    background-image: url('serce1.png');
+    animation: heartBurst 1s ease-out forwards;
+}
+
+.heart.color-2 {
+    background-image: url('serce2.png');
+    animation: heartBurst 1s ease-out forwards;
+}
+
+.heart.color-3 {
+    background-image: url('serce3.png');
+    animation: heartBurst 1s ease-out forwards;
+}
+
 /* Licznik polubień */
 #likeCount {
     font-size: 20px;
