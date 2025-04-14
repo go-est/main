@@ -13,7 +13,7 @@ body {
 
 header {
     background-color: #F75DB1;
-    padding: -10px 40px;  /* Zmniejszymy wysokość */
+    padding: 20px 40px;  /* Zmniejszymy wysokość */
     position: fixed;
     width: 100%;
     top: 0;
@@ -121,6 +121,6 @@ footer {
 }
 
 .header-spacer {
-    height: 300px;
+    height: 10px;
 }
 
