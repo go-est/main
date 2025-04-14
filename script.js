@@ -20,21 +20,36 @@ document.getElementById("copyButton").onclick = function() {
 //przycisk w sekcji 1 poniżej
 
 
-let isLiked = false;  // Sprawdzenie, czy przycisk został kliknięty
-let likeCount = 0;    // Zmienna przechowująca liczbę kliknięć
 
-const likeButton = document.getElementById('likeButton');
-const likeCountElement = document.getElementById('likeCount');
+let likeButton = document.getElementById('likeButton');
+let likeCountElement = document.getElementById('likeCount');
 
+// Sprawdzenie, czy dane istnieją w localStorage
+let likeCount = localStorage.getItem('likeCount') ? parseInt(localStorage.getItem('likeCount')) : 0; // Ustawienie początkowej wartości
+let isLiked = localStorage.getItem('isLiked') === 'true'; // Zczytanie stanu przycisku (czy kliknięty)
+
+likeCountElement.textContent = likeCount; // Ustawienie początkowego licznika
+
+// Zmiana grafiki i stanu przycisku
+if (isLiked) {
+  likeButton.classList.add('liked');
+  likeButton.disabled = true; // Zablokowanie przycisku
+}
+
+// Obsługa kliknięcia
 likeButton.addEventListener('click', () => {
   if (!isLiked) {
-    likeCount++;  // Zwiększ licznik kliknięć
-    likeCountElement.textContent = likeCount;  // Zaktualizuj licznik w DOM
+    likeCount++; // Zwiększ liczbę kliknięć
+    likeCountElement.textContent = likeCount;
 
-    // Zmiana koloru przycisku i blokada dalszych kliknięć
+    // Zmiana koloru przycisku i blokowanie dalszych kliknięć
     likeButton.classList.add('liked');
-
-    // Zablokowanie możliwości ponownego kliknięcia
     isLiked = true;
+
+    // Zapisanie danych do localStorage
+    localStorage.setItem('likeCount', likeCount); // Zapisz liczbę kliknięć
+    localStorage.setItem('isLiked', true); // Zapisz, że przycisk został kliknięty
+
+    likeButton.disabled = true; // Zablokowanie przycisku
   }
 });
