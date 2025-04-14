@@ -20,28 +20,22 @@ document.getElementById("copyButton").onclick = function() {
 //przycisk w sekcji 1 poniżej
 
 
+let isLiked = false;  // Sprawdzenie, czy przycisk został kliknięty
+let likeCount = 0;    // Zmienna przechowująca liczbę kliknięć
 
-
-// Zmienna śledząca, czy przycisk został kliknięty
-let isLiked = false;
-let likeCount = 0;
-
-// Wybieramy przycisk i ikonkę serca
 const likeButton = document.getElementById('likeButton');
 const likeIcon = document.getElementById('likeIcon');
 const likeCountElement = document.getElementById('likeCount');
 
-// Funkcja wykonująca się po kliknięciu przycisku
 likeButton.addEventListener('click', () => {
   if (!isLiked) {
-    // Zwiększamy licznik
-    likeCount++;
-    likeCountElement.textContent = likeCount;
+    likeCount++;  // Zwiększ licznik kliknięć
+    likeCountElement.textContent = likeCount;  // Zaktualizuj licznik w DOM
 
-    // Zmieniamy wygląd przycisku (serduszko na czerwono)
+    // Zmiana koloru przycisku i blokada dalszych kliknięć
     likeButton.classList.add('liked');
 
-    // Blokujemy możliwość kliknięcia po 1 razie
+    // Zablokowanie możliwości ponownego kliknięcia
     isLiked = true;
   }
 });
