@@ -11,10 +11,9 @@ body {
     color: white;
 }
 
-/* Header */
 header {
     background-color: #F75DB1;
-    padding: 50px 20px; /* Zmieniliśmy wysokość paddingu z 20px na 10px */
+    padding: 10px 40px;  /* Zmniejszymy wysokość */
     position: fixed;
     width: 100%;
     top: 0;
@@ -24,6 +23,7 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+
 
 /* Logo z ikoną */
 .logo {
