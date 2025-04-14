@@ -23,11 +23,13 @@
     background-image: url('serce1.png'); /* Podstawowe serce */
     background-size: cover;
     background-position: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Dodajemy lekki cień */
 }
 
 /* Zmiana grafiki po hover */
 #likeButton:hover {
     background-image: url('serce2.png'); /* Zmieniamy grafikę po hover */
+    transform: scale(1.1); /* Powiększamy przycisk na hover */
 }
 
 /* Zmiana grafiki po kliknięciu */
@@ -37,6 +39,7 @@
     border-color: #FF3B30;
     color: white;
     pointer-events: none; /* Zablokowanie kliknięcia */
+    transform: scale(0.9); /* Zmniejszamy przycisk po kliknięciu */
 }
 
 /* Licznik polubień */
