@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="EST to projekt stworzenia sieci stacji wynajmu powerbanków, które zapewniają dostęp do energii w każdym miejscu.">
   <title>EST</title>
   <link rel="stylesheet" href="like.css" />
   <link rel="stylesheet" href="style.css" />
@@ -99,19 +100,19 @@
     </nav>
   </header>
 
- <section id="home" class="section">
+  <section id="home" class="section">
     <div class="content">
-        <h2>Co to za projekt?</h2>
-        <p>EST to projekt, którego celem jest stworzenie sieci stacji wynajmu powerbanków – zapewniamy dostęp do energii niezależnie od miejsca i czasu!</p>
+      <h2>Co to za projekt?</h2>
+      <p>EST to projekt, którego celem jest stworzenie sieci stacji wynajmu powerbanków – zapewniamy dostęp do energii niezależnie od miejsca i czasu!</p>
 
-        <div class="like-container">
-            <button id="likeButton">
-                <img src="serce1.png" alt="Like" class="like-img" id="likeImage">
-            </button>
-            <span id="likeCount">0</span>
-        </div>
+      <div class="like-container">
+        <button id="likeButton">
+          <img src="serce1.png" alt="Like" class="like-img" id="likeImage">
+        </button>
+        <span id="likeCount">0</span>
+      </div>
     </div>
-</section>
+  </section>
 
   <section id="ankieta" class="section about-section">
     <h2>Ankieta</h2>
@@ -136,47 +137,6 @@
     <p>&copy; 2025 EST. Wszelkie prawa zastrzeżone.</p>
   </footer>
 
-  <script>
-    const likeButton = document.getElementById('likeButton');
-    const likeCount = document.getElementById('likeCount');
-
-    let liked = localStorage.getItem('liked') === 'true';
-    let count = localStorage.getItem('likeCount') || 0;
-
-    likeCount.textContent = count;
-
-    if (liked) {
-      likeButton.classList.add('liked');
-    }
-
-    likeButton.addEventListener('click', () => {
-      if (!liked) {
-        liked = true;
-        count++;
-        localStorage.setItem('liked', 'true');
-        localStorage.setItem('likeCount', count);
-        likeCount.textContent = count;
-        likeButton.classList.add('liked');
-
-        // Animacja serduszek
-        for (let i = 0; i < 6; i++) {
-          const heart = document.createElement('div');
-          heart.classList.add('heart');
-
-          // losowe przesunięcia
-          const offsetX = Math.random() * 80 - 40;
-          const offsetY = Math.random() * 20 + 30;
-          heart.style.left = `calc(50% + ${offsetX}px)`;
-          heart.style.bottom = `20px`;
-
-          likeButton.parentElement.appendChild(heart);
-
-          setTimeout(() => {
-            heart.remove();
-          }, 1000);
-        }
-      }
-    });
-  </script>
+  <script src="like.js"></script>
 </body>
 </html>
