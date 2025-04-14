@@ -22,25 +22,26 @@ document.getElementById("copyButton").onclick = function() {
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    const likeButton = document.getElementById('likeButton');
-    const likeCount = document.getElementById('likeCount');
+// Zmienna śledząca, czy przycisk został kliknięty
+let isLiked = false;
+let likeCount = 0;
 
-    if (localStorage.getItem('liked') === 'true') {
-        likeButton.disabled = true;
-        likeButton.innerText = '💖 Dziękujemy!';
-        likeCount.textContent = localStorage.getItem('likeCount') || '1';
-    }
+// Wybieramy przycisk i ikonkę serca
+const likeButton = document.getElementById('likeButton');
+const likeIcon = document.getElementById('likeIcon');
+const likeCountElement = document.getElementById('likeCount');
 
-    likeButton.addEventListener('click', () => {
-        let count = parseInt(localStorage.getItem('likeCount') || '0');
-        count++;
+// Funkcja wykonująca się po kliknięciu przycisku
+likeButton.addEventListener('click', () => {
+  if (!isLiked) {
+    // Zwiększamy licznik
+    likeCount++;
+    likeCountElement.textContent = likeCount;
 
-        likeButton.innerHTML = '💖 Dziękujemy!';
-        likeButton.disabled = true;
-        likeCount.textContent = count;
+    // Zmieniamy wygląd przycisku (serduszko na czerwono)
+    likeButton.classList.add('liked');
 
-        localStorage.setItem('liked', 'true');
-        localStorage.setItem('likeCount', count);
-    });
+    // Blokujemy możliwość kliknięcia po 1 razie
+    isLiked = true;
+  }
 });
